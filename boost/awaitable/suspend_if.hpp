@@ -14,13 +14,12 @@
 BOOST_AWAITABLE_BEGIN_NAMESPACE
 
 // suspend_if: A trivial Awaitable similar to suspend_never and suspend_always
-// from the Coroutine TS v1.
-//
-// suspend_if takes a single boolean parameter on construction. If the bool is
-// true, suspend_if will suspend the current coroutine when awaited and control
-// will return to the caller or resumer. If the bool is false, suspend_if will
-// not suspend when awaited and execution of the current coroutine will
-// continue.
+// from the Coroutine TS v1. suspend_if takes a single boolean parameter on
+// construction. If the bool is true, suspend_if will suspend the current
+// coroutine when awaited and control will return to the caller or resumer. If
+// the bool is false, suspend_if will not suspend when awaited and execution of
+// the current coroutine will continue.
+
 struct suspend_if
 {
   private:

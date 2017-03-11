@@ -1,9 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
-//  Copyright (c) 2017 Bryce Adelstein Lelbach aka wash <brycelelbach@gmail.com> 
-//  Copyright (c) 2017 Gor Nishanov
+// Copyright (c) 2017 Bryce Adelstein Lelbach aka wash <brycelelbach@gmail.com> 
+// Copyright (c) 2017 Gor Nishanov
 //
-//  Distributed under the Boost Software License, Version 1.0. (See accompanying
-//  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+// Distributed under the Boost Software License, Version 1.0. (See accompanying
+// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 ///////////////////////////////////////////////////////////////////////////////
 
 #if !defined(BOOST_AWAITABLE_F977BF7B_6E97_479E_976F_F457D91C7833)
