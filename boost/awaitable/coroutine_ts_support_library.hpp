@@ -12,6 +12,7 @@
 #if defined(BOOST_AWAITABLE_WITH_PORTABLE_COROUTINE_TS_V1_SUPPORT_LIBRARY)
 
 #define BOOST_AWAITABLE_HAVE_PORTABLE_COROUTINE_TS_V1_SUPPORT_LIBRARY 1
+#define BOOST_AWAITABLE_STD_COROUTINE_NAMESPACE std::experimental
 
 // Portable implementation of <experimental/coroutine>.
 
@@ -280,6 +281,7 @@ struct suspend_never
     #if __has_include(<experimental/coroutine>)
         #include <experimental/coroutine>
         #define BOOST_AWAITABLE_HAVE_NATIVE_COROUTINE_TS_V1_SUPPORT_LIBRARY 1
+        #define BOOST_AWAITABLE_STD_COROUTINE_NAMESPACE std::experimental
     #endif
 #else
     #error Could not find <experimental/coroutine>; define                  \
