@@ -27,9 +27,9 @@ struct suspension_status
     bool state; // False if suspended and true otherwise.
 
   public:
-    suspension_status() noexcept(Awaitable{}) : a{}, state{true} {}
+    suspension_status() noexcept(noexcept(Awaitable{})) : a{}, state{true} {}
 
-    auto await_ready() noexcept(a.await_ready())
+    constexpr auto await_ready() noexcept(noexcept(a.await_ready()))
     {
         // Coroutines TS 5.8.3 [expr.await] p5.1 states "the await-expression
         // evaluates the await-ready expression, then if the result is false,
@@ -42,12 +42,13 @@ struct suspension_status
     // This has to be templated in case the wrapped Awaitable takes
     // coroutine_handle<Promise> instead of coroutine_handle<>.
     template <typename Promise>
-    auto await_suspend(coroutine_handle<Promise> h) noexcept(a.await_suspend(h))
+    constexpr auto await_suspend(coroutine_handle<Promise> h)
+        noexcept(noexcept(a.await_suspend(h)))
     {
         return a.await_suspend(h);
     }
 
-    void await_resume() noexcept(a.await_resume())
+    constexpr void await_resume() noexcept(noexcept(a.await_resume()))
     {
         state = true;
         a.await_resume();
