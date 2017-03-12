@@ -4,7 +4,7 @@ The requirements on the type of the expression <code><i>cast-expression</i></cod
 
 <code><i>cast-expression</i></code> (type <code><i>CE</i></code>) goes through a "pipeline" described in Coroutine TS 5.3.8 [**expr.await**] p3, where <code><i>p</i></code> (type <code><i>P</i></code> which satisfies `BasicCoPromise`):
 
-| # | Object/Expression Type | Object/Expression Name | Object/Expression Definition                                                                                                                                                                                  | 
+| # | Type | Name | Definition                                                                                                                                                                                  | 
 |---|------------------------|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | <code><i>A</i></code>  | <code><i>a</i></code>  | <code><i>p</i>.await_transform(<i>cast-expression</i>)</code> if it is valid (AKA <code>AwaitableByTransform&lt;<i>CE</i>, <i>P</i>&gt;</code> is satisfied); otherwise, <code><i>cast-expression</i></code>. |
 | 2 | <code><i>O</i></code>  | <code><i>o</i></code>  | <code>operator co_await(<i>a</i>)</code> if it is valid (AKA <code>AwaitableByProxy&lt;<i>A</i>&gt;</code> is satisfied); otherwise, <code><i>a</i></code>.                                                   |
