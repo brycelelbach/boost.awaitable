@@ -1,6 +1,6 @@
 ## Awaitable Concepts
 
-The requirements on the type of the expression <code><i>cast-expression</i></code> required for expression <code>co_await <i>cast-expression</i></code> to be valid. `BasicAwaitable` is the minimal set of requirements. `AwaitableByTransform` and `AwaitableByProxy` are satisified by types that have a mechanism for producing `BasicAwaitable` objects. `Awaitable` is satisified by types that meet any of the three other concepts.
+The requirements on the type of the expression <code><i>cast-expression</i></code> necessary for the expression <code>co_await <i>cast-expression</i></code> to be valid. `BasicAwaitable` is the minimal set of requirements. `AwaitableByTransform` and `AwaitableByProxy` are satisified by types that have a mechanism for producing `BasicAwaitable` objects. `Awaitable` is satisified by types that meet any of the three other concepts.
 
 <code><i>cast-expression</i></code> (type <code><i>CE</i></code>) goes through a "pipeline" described in Coroutine TS 5.3.8 [**expr.await**] p3, where <code><i>p</i></code> (type <code><i>P</i></code> which satisfies `BasicCoPromise`):
 
